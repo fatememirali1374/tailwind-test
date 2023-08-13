@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tailwind-cli</title>
+    <link rel="stylesheet" href="./build/tailwind.css" />
+  </head>
+  <body class="bg-blue-600 flex justify-center items-center h-screen">
+    <div class="container xl:max-w-screen-xl">
+      <div
+        class="grid grid-cols-1 gap-y-4 md:grid-cols-12 md:gap-4 grid-rows-[60px_minmax(500px,_1fr)]"
+      >
+        <div class="bg-white p-4 hidden md:block col-span-2 row-span-2">
+          sidebar
+        </div>
+        <div class="bg-white p-4 col-span-10">sort header</div>
+        <div class="bg-white p-4 col-span-10">products</div>
+      </div>
+    </div>
+  </body>
+</html>

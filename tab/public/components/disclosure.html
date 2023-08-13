@@ -1,0 +1,65 @@
+<div class="bg-blue-600 flex justify-center items-center h-screen">
+  <div class="bg-white rounded-xl max-w-xl w-full flex flex-col p-4 gap-y-4">
+    <div x-data="{ tabOne: false }" class="flex flex-col">
+      <header
+        @click="tabOne= !tabOne"
+        class="flex justify-between items-center my-2 cursor-pointer bg-gray-300 rounded-lg p-2 text-purple-800 font-bold"
+      >
+        <h1>subject1</h1>
+        <svg
+          :class="tabOne ? 'rotate-180' : ''"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-5 h-5 transition-all duration-700"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+          />
+        </svg>
+      </header>
+      <p x-show="tabOne" class="px-4 pt-2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti esse
+        voluptates labore perspiciatis earum quia sapiente debitis illum iste
+        natus nisi, dolorum ipsam perferendis ad delectus possimus ipsum
+        doloribus. In eius dicta nam quo, voluptatibus repudiandae modi quas
+        atque pariatur ex quia. Unde non eos blanditiis iste excepturi, veniam
+        iusto!
+      </p>
+    </div>
+    <div x-data="{ tabTwo: false }" class="flex flex-col">
+      <header
+        @click="tabTwo= !tabTwo"
+        class="flex justify-between items-center my-2 cursor-pointer bg-gray-300 rounded-lg p-2 text-purple-800 font-bold"
+      >
+        <h1>subject1</h1>
+        <svg
+          :class="tabTwo ? 'rotate-180' : ''"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-5 h-5 transition-all duration-700"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+          />
+        </svg>
+      </header>
+      <p x-show="tabTwo" class="px-4 pt-2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt
+        tempora itaque earum repudiandae perspiciatis consectetur assumenda!
+        Delectus sequi mollitia assumenda quia, eveniet accusamus molestiae
+        consequatur adipisci! Repudiandae facere expedita magnam.
+      </p>
+    </div>
+  </div>
+  <script src="//unpkg.com/alpinejs" defer></script>
+</div>

@@ -1,0 +1,40 @@
+<div class="bg-gray-100 flex justify-center items-center h-screen">
+  <div x-data="{ isOpen: false }" class="relative">
+    <button
+      @click="isOpen = !isOpen"
+      class="z-10 relative px-4 py-2 inline-flex items-center bg-blue-500 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-white"
+    >
+      <span>show more</span
+      ><svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-5 h-5 ml-1"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+        />
+      </svg>
+    </button>
+    <button
+      x-show="isOpen"
+      @click="isOpen=false"
+      class="inset-0 fixed opacity-70 bg-gray-200"
+    ></button>
+    <div
+      x-show="isOpen"
+      class="bg-white w-56 mt-2 rounded-lg overflow-hidden border-gray-200 absolute left-0"
+    >
+      <a href="#" class="block text-gray-700 p-2 hover:bg-gray-100">accunt</a
+      ><a href="#" class="block text-gray-700 p-2 hover:bg-gray-100">support</a
+      ><a href="#" class="block text-gray-700 p-2 hover:bg-gray-100"
+        >settings</a
+      >
+    </div>
+  </div>
+  <script src="//unpkg.com/alpinejs" defer></script>
+</div>
